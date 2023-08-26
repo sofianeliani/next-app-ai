@@ -21,7 +21,7 @@ const MobileSideBar = () => {
     <Sheet>
       <SheetTrigger>
         <div className="flex items-center p-4">
-          <Button variant="ghost" className="md:hidden">
+          <Button variant="ghost" size="icon" className="md:hidden">
             <FontAwesomeIcon className="fontawesome-i" icon={faBars} />
           </Button>
         </div>

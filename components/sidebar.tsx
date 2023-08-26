@@ -28,16 +28,16 @@ const routes = [
     color: "text-sky-400",
   },
   {
-    label: "Conversation",
+    label: "chat",
     icon: faComment,
     href: "/chat",
     color: "text-violet-400",
   },
   {
-    label: "Code Generation",
-    icon: faCode,
-    href: "/code",
-    color: "text-zinc-400",
+    label: "Music Generation",
+    icon: faMusic,
+    href: "/musics",
+    color: "text-emerald-300",
   },
   {
     label: "Image Generation",
@@ -49,21 +49,21 @@ const routes = [
     label: "Video Generation",
     icon: faVideo,
     href: "/videos",
-    color: "text-orange-400",
+    color: "text-pink-400",
   },
   {
-    label: "Music Generation",
-    icon: faMusic,
-    href: "/musics",
-    color: "text-emerald-300",
+    label: "Code Generation",
+    icon: faCode,
+    href: "/code",
+    color: "text-zinc-400",
   },
 ];
 
 const Sidebar = () => {
   const pathname = usePathname();
   return (
-    <div className="space-y-4 py-4 flex flex-col bg-[#111827] text-white">
-      <div className="px-3 py-2 flex-1">
+    <div className="h-full space-y-4 py-4 flex flex-col bg-[#111827] text-white">
+      <div className="px-3 py-2">
         <Link href="/dashboard" className="flex items-center pl-3 mb-14">
           <div className="relative w-8 h-8 mr-4">
             <Image fill alt="logo" src="/logo.png" />
@@ -73,7 +73,7 @@ const Sidebar = () => {
           </h1>
         </Link>
       </div>
-      <div className="space-y-1">
+      <div className="mt-0 space-y-1">
         {routes.map((route) => (
           <Link
             href={route.href}
